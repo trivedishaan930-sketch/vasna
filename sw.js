@@ -1,4 +1,4 @@
-const CACHE_NAME='velora-editorial-v5';
+const CACHE_NAME='velora-editorial-v6';
 const SHELL=[
   './',
   './index.html',
@@ -7,7 +7,13 @@ const SHELL=[
   './app.js',
   './manifest.webmanifest',
   './icon.svg',
-  './assets/velora-couple-hero.jpg'
+  './assets/velora-couple-hero.jpg',
+  './assets/velora-hero-part-0.txt',
+  './assets/velora-hero-part-1.txt',
+  './assets/velora-hero-part-2.txt',
+  './assets/velora-hero-part-3.txt',
+  './assets/velora-hero-part-4a.txt',
+  './assets/velora-hero-part-4b.txt',
 ];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));

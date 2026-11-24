@@ -75,13 +75,13 @@ button{font-family:var(--sans)}
 .luxury-hero .hero-values{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin-top:27px;color:#e8e5df;font:500 8px var(--sans)}
 .luxury-hero .hero-values b{margin-right:4px;color:#e8c47c;font-size:12px}
 .luxury-hero .hero-values i{width:1px;height:17px;background:#e5c78b55}
-.luxury-hero .hero-visual{position:absolute;z-index:0;top:0;right:0;bottom:0;left:39%;width:61%;height:100%;pointer-events:none}
+.luxury-hero .hero-visual{position:absolute;z-index:0;inset:0;width:100%;height:100%;pointer-events:none}
 .luxury-hero .hero-photo-frame{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;border:0;border-radius:0;background:#26364b;box-shadow:none}
 .luxury-hero .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 46%;filter:saturate(1.02) contrast(1.02)}
 .luxury-hero .hero-photo-frame:after{
  content:"";position:absolute;inset:0;pointer-events:none;
- background:linear-gradient(90deg,#091426f5 0%,#0b1729b8 19%,#0b172947 43%,transparent 76%),
- linear-gradient(0deg,#091426d6 0%,transparent 23%,#08142622 100%);
+ background:linear-gradient(90deg,#091426db 0%,#0b172987 22%,#0b17292d 43%,transparent 70%),
+ linear-gradient(0deg,#091426a8 0%,transparent 24%,#08142605 100%);
 }
 .luxury-hero .photo-caption{position:absolute;z-index:2;right:5%;bottom:19px;left:auto;max-width:260px;padding:13px 17px;border-left:1px solid #f0d39c;background:#0d1a2b9c;backdrop-filter:blur(8px);display:flex;flex-direction:column;gap:4px}
 .luxury-hero .photo-caption span{font:700 6px var(--sans);letter-spacing:.18em;color:#f0d49f}
@@ -284,8 +284,8 @@ button{font-family:var(--sans)}
  .luxury-hero .hero-values{display:none}
  .luxury-hero .hero-visual{order:2;position:relative;inset:auto;display:block;width:100%;height:auto;aspect-ratio:16/9;min-height:0;border-radius:10px;overflow:hidden;border:1px solid #d9bb835e;box-shadow:0 12px 28px #0004}
  .luxury-hero .hero-photo-frame{position:absolute;inset:0;width:100%;height:100%;border-radius:0}
- .luxury-hero .hero-photo{object-fit:cover;object-position:center center}
- .luxury-hero .hero-photo-frame:after{background:linear-gradient(0deg,#07142688,transparent 32%)}
+ .luxury-hero .hero-photo{object-fit:cover;object-position:center center;filter:none}
+ .luxury-hero .hero-photo-frame:after{background:linear-gradient(0deg,#07142642,transparent 36%)}
  .luxury-hero .photo-caption{left:9px;right:auto;bottom:8px;max-width:190px;padding:7px 9px}
  .luxury-hero .photo-caption span{font-size:5px}
  .luxury-hero .photo-caption strong{font-size:13px}

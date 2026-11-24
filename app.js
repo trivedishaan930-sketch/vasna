@@ -305,3 +305,34 @@
   });
   if('serviceWorker' in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 })();
+
+/* Load the full-resolution VELORA sunset campaign image assembled from cached
+   text chunks. The low-res HTML image remains a fallback if a chunk is offline. */
+(async()=>{
+  const heroImage=document.querySelector('.hero-photo');
+  if(!heroImage)return;
+  const parts=[
+    'velora-hero-part-0.txt',
+    'velora-hero-part-1.txt',
+    'velora-hero-part-2.txt',
+    'velora-hero-part-3.txt',
+    'velora-hero-part-4a.txt',
+    'velora-hero-part-4b.txt'
+  ];
+  try{
+    const encoded=await Promise.all(parts.map(async name=>{
+      const response=await fetch('./assets/'+name,{cache:'force-cache'});
+      if(!response.ok)throw new Error('Unable to load '+name);
+      return (await response.text()).trim();
+    }));
+    const binary=atob(encoded.join(''));
+    const bytes=new Uint8Array(binary.length);
+    for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
+    const url=URL.createObjectURL(new Blob([bytes],{type:'image/webp'}));
+    heroImage.src=url;
+    if(heroImage.decode)await heroImage.decode();
+    heroImage.classList.add('hero-image-ready');
+  }catch(error){
+    console.error('VELORA campaign image fallback:',error);
+  }
+})();
