@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a2b">
+  <meta name="description" content="Discover romantic destinations, plan thoughtful getaways, find your travel style and create beautiful experiences with VELORA.">
+  <meta property="og:title" content="VELORA — Make Room for Romance">
+  <meta property="og:description" content="A thoughtful guide to romance, travel and lifestyle.">
+  <meta property="og:type" content="website">
+  <title>VELORA — Romance, Travel & Lifestyle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
+    <div class="age-card">
+      <div class="brand-mark brand-mark-large">V</div>
+      <p class="eyebrow">WELCOME TO VELORA</p>
+      <h1 id="ageTitle">A more thoughtful kind of romance.</h1>
+      <p>VELORA is designed for adults exploring travel, relationships, wellbeing and meaningful experiences.</p>
+      <p class="age-note">Please confirm that you are at least 18 years old to continue. This is an acknowledgement, not identity verification.</p>
+      <div class="age-actions">
+        <button class="button button-primary" id="confirmAge">I am 18 or older <span aria-hidden="true">→</span></button>
+        <button class="button button-quiet" id="leaveSite">Leave</button>
+      </div>
+      <small>Respect • Consent • Wellbeing</small>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="VELORA home">
+      <span class="brand-symbol" aria-hidden="true">♡</span>
+      <span class="brand-copy"><strong>VELORA</strong><small>ROMANCE · TRAVEL · LIFESTYLE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a class="nav-link active" href="#top">Home</a>
+      <a class="nav-link" href="#discover">Explore</a>
+      <a class="nav-link" href="#planner">Travel planner</a>
+      <a class="nav-link" href="#style">Style</a>
+      <a class="nav-link" href="#stories">Stories</a>
+      <a class="nav-link" href="#essentials">Essentials</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="savedButton" aria-label="View saved items"><span aria-hidden="true">♡</span><i id="savedCount">0</i></button>
+      <a class="button button-outline button-small" href="#concierge">Meet Velora AI</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-image" role="img" aria-label="A couple enjoying a golden-hour walk beside the sea"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-inner page-wrap">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-light"><span></span> A WORLD OF BEAUTIFUL EXPERIENCES</p>
+          <h1>Make room<br>for <em>romance.</em></h1>
+          <p class="hero-lede">Discover places, experiences and thoughtful ideas that make life feel a little more meaningful.</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#planner">Plan a getaway <span aria-hidden="true">↗</span></a>
+            <a class="button button-glass" href="#discover">Explore experiences</a>
+          </div>
+          <div class="hero-proof">
+            <span><b>✦</b> Thoughtful inspiration</span>
+            <span><b>✦</b> Made for adults</span>
+            <span><b>✦</b> Respectful by design</span>
+          </div>
+        </div>
+        <div class="hero-side-note"><span class="note-line"></span><span>THE ART OF<br>GETTING CLOSER</span></div>
+      </div>
+      <div class="hero-bottom page-wrap">
+        <div class="hero-bottom-label"><span class="pulse-dot"></span> YOUR NEXT CHAPTER STARTS HERE</div>
+        <div class="hero-bottom-text">Travel beautifully. Connect meaningfully. Live fully.</div>
+      </div>
+    </section>
+
+    <section class="quick-planner page-wrap" aria-label="Quick trip search">
+      <div class="quick-intro"><span class="mini-icon">✧</span><div><strong>Where could love take you?</strong><small>Start with a place, a season or a feeling.</small></div></div>
+      <form class="quick-form" id="quickForm">
+        <label><span>Destination</span><select id="quickDestination"><option value="Santorini">Santorini, Greece</option><option value="Amalfi Coast">Amalfi Coast, Italy</option><option value="Bali">Bali, Indonesia</option><option value="Kyoto">Kyoto, Japan</option><option value="Paris">Paris, France</option><option value="Maldives">Maldives</option></select></label>
+        <label><span>When</span><select id="quickMonth"><option value="June">June</option><option value="July">July</option><option value="September">September</option><option value="October">October</option><option value="December">December</option><option value="April">April</option></select></label>
+        <label><span>Travelling as</span><select id="quickFor"><option value="Couple">A couple</option><option value="Solo">Solo explorer</option><option value="Friends">Friends</option></select></label>
+        <button class="button button-primary quick-submit" type="submit">Shape my escape <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+
+    <section class="trust-strip">
+      <div class="page-wrap trust-grid">
+        <div><span class="trust-icon">◎</span><span><b>Worldwide ideas</b><small>Places worth discovering</small></span></div>
+        <div><span class="trust-icon">♡</span><span><b>Thoughtful planning</b><small>Little details, beautifully considered</small></span></div>
+        <div><span class="trust-icon">✧</span><span><b>Style guidance</b><small>Feel good wherever you go</small></span></div>
+        <div><span class="trust-icon">◇</span><span><b>Wellbeing first</b><small>Respect, safety and care</small></span></div>
+      </div>
+    </section>
+
+    <section class="section page-wrap" id="discover">
+      <div class="section-heading">
+        <div><p class="eyebrow">A WORLD TO EXPLORE</p><h2>Find your kind of <em>beautiful.</em></h2><p class="section-lede">From sunlit coastlines to memorable city evenings, explore experiences that fit your own pace.</p></div>
+        <a class="text-link" href="#planner">Build a trip <span>↗</span></a>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filter destinations">
+        <button class="filter-chip selected" data-filter="all">All places</button>
+        <button class="filter-chip" data-filter="coast">Coastal escapes</button>
+        <button class="filter-chip" data-filter="culture">Culture & city</button>
+        <button class="filter-chip" data-filter="nature">Nature & slow travel</button>
+      </div>
+      <div class="destination-grid" id="destinationGrid">
+        <article class="destination-card destination-featured" data-category="coast">
+          <img src="https://images.unsplash.com/photo-1571406252241-db0280bd36cd?auto=format&fit=crop&w=1200&q=82" alt="Whitewashed buildings along the coast of Santorini" loading="lazy">
+          <div class="destination-overlay"><span class="card-kicker">GREECE · AEGEAN SEA</span><h3>Santorini</h3><p>Caldera views, quiet mornings and sunset walks.</p><button class="card-action" data-destination="Santorini">Explore destination <span>↗</span></button></div>
+          <button class="save-card" aria-label="Save Santorini" data-save="Santorini">♡</button>
+        </article>
+        <article class="destination-card" data-category="coast">
+          <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=900&q=82" alt="Mediterranean coastline and colourful seaside buildings" loading="lazy">
+          <div class="destination-overlay"><span class="card-kicker">ITALY · TYRRHENIAN SEA</span><h3>Amalfi Coast</h3><p>Cliffside villages and long lunches.</p><button class="card-action" data-destination="Amalfi Coast">Explore destination <span>↗</span></button></div>
+          <button class="save-card" aria-label="Save Amalfi Coast" data-save="Amalfi Coast">♡</button>
+        </article>
+        <article class="destination-card" data-category="coast nature">
+          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=82" alt="Tropical Bali coastline and lush greenery" loading="lazy">
+          <div class="destination-overlay"><span class="card-kicker">INDONESIA · ISLAND LIFE</span><h3>Bali</h3><p>Green escapes, beaches and restorative stays.</p><button class="card-action" data-destination="Bali">Explore destination <span>↗</span></button></div>
+          <button class="save-card" aria-label="Save Bali" data-save="Bali">♡</button>
+        </article>
+        <article class="destination-card" data-category="culture nature">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=82" alt="Traditional Kyoto street with Japanese architecture" loading="lazy">
+          <div class="destination-overlay"><span class="card-kicker">JAPAN · CULTURE</span><h3>Kyoto</h3><p>Garden paths, tea houses and timeless details.</p><button class="card-action" data-destination="Kyoto">Explore destination <span>↗</span></button></div>
+          <button class="save-card" aria-label="Save Kyoto" data-save="Kyoto">♡</button>
+        </article>
+        <article class="destination-card" data-category="culture">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=82" alt="Paris rooftops and the Eiffel Tower" loading="lazy">
+          <div class="destination-overlay"><span class="card-kicker">FRANCE · CITY BREAK</span><h3>Paris</h3><p>Art, neighbourhood cafés and evening lights.</p><button class="card-action" data-destination="Paris">Explore destination <span>↗</span></button></div>
+          <button class="save-card" aria-label="Save Paris" data-save="Paris">♡</button>
+        </article>
+        <article class="destination-card" data-category="coast nature">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=82" alt="Overwater villas above a clear tropical sea" loading="lazy">
+          <div class="destination-overlay"><span class="card-kicker">INDIAN OCEAN · ISLANDS</span><h3>Maldives</h3><p>Blue horizons and unhurried island days.</p><button class="card-action" data-destination="Maldives">Explore destination <span>↗</span></button></div>
+          <button class="save-card" aria-label="Save Maldives" data-save="Maldives">♡</button>
+        </article>
+      </div>
+      <p class="data-note">Destination descriptions are inspiration, not live travel advice. Check current weather, entry requirements and local guidance before booking.</p>
+    </section>
+
+    <section class="planner-section" id="planner">
+      <div class="page-wrap planner-layout">
+        <div class="planner-copy">
+          <p class="eyebrow eyebrow-light">YOUR PERSONAL GETAWAY BLUEPRINT</p>
+          <h2>A little planning.<br><em>A lot more possibility.</em></h2>
+          <p>Tell us what you have in mind. VELORA will shape a starter itinerary you can save, refine and make your own.</p>
+          <div class="planner-points"><span>✓ Flexible trip styles</span><span>✓ Thoughtful daily rhythms</span><span>✓ Packing and style ideas</span></div>
+          <div class="planner-disclaimer">The planner is an offline demo using curated sample suggestions. It does not check live prices, forecasts or availability.</div>
+        </div>
+        <div class="planner-panel">
+          <div class="panel-top"><span class="panel-step">01 / YOUR ESCAPE</span><span class="panel-spark">✧</span></div>
+          <form id="tripForm" class="trip-form">
+            <label class="field-wide">Where would you like to go?<select id="tripDestination" required><option value="Santorini">Santorini, Greece</option><option value="Amalfi Coast">Amalfi Coast, Italy</option><option value="Bali">Bali, Indonesia</option><option value="Kyoto">Kyoto, Japan</option><option value="Paris">Paris, France</option><option value="Maldives">Maldives</option></select></label>
+            <div class="field-grid">
+              <label>Travel month<select id="tripMonth"><option>June</option><option>July</option><option>September</option><option>October</option><option>December</option><option>April</option></select></label>
+              <label>Trip length<select id="tripLength"><option value="3">3 days</option><option value="5" selected>5 days</option><option value="7">7 days</option></select></label>
+              <label>Who is travelling?<select id="tripType"><option value="Couple">Couple</option><option value="Solo">Solo</option><option value="Friends">Friends</option></select></label>
+              <label>Travel mood<select id="tripMood"><option value="Relaxed">Slow & relaxed</option><option value="Culture">Culture & discovery</option><option value="Adventure">A little adventure</option><option value="Romantic">Romantic moments</option></select></label>
+            </div>
+            <button class="button button-primary button-full" type="submit">Create my starter itinerary <span>→</span></button>
+          </form>
+          <div class="itinerary-result" id="itineraryResult" hidden aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-wrap" id="style">
+      <div class="section-heading">
+        <div><p class="eyebrow">DRESS FOR THE MOMENT</p><h2>Style that travels <em>with you.</em></h2><p class="section-lede">Practical outfit inspiration for the weather, occasion and feeling you want.</p></div>
+      </div>
+      <div class="style-layout">
+        <div class="style-image">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=82" alt="Contemporary summer fashion editorial" loading="lazy">
+          <div class="style-image-caption"><span>THE VELORA EDIT</span><strong>Comfort, confidence<br>and a little occasion.</strong></div>
+        </div>
+        <div class="style-panel">
+          <p class="panel-step">02 / PERSONAL STYLE GUIDE</p>
+          <h3>What are you dressing for?</h3>
+          <form id="styleForm">
+            <label>Occasion<select id="styleOccasion"><option value="coastal">Coastal escape</option><option value="city">City evening</option><option value="dinner">Romantic dinner</option><option value="explore">Walking & exploring</option></select></label>
+            <label>Expected weather<select id="styleWeather"><option value="warm">Warm & sunny</option><option value="mild">Mild & breezy</option><option value="cool">Cool / layered</option></select></label>
+            <label>Style preference<select id="styleMood"><option value="elegant">Quiet elegance</option><option value="relaxed">Relaxed casual</option><option value="polished">Polished statement</option></select></label>
+            <button class="button button-dark button-full" type="submit">Find my outfit ideas <span>→</span></button>
+          </form>
+          <div class="style-result" id="styleResult" aria-live="polite"><span class="result-label">A STARTING POINT</span><p>Choose an occasion and we’ll suggest a practical outfit direction, footwear and finishing touches.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="essentials-section" id="essentials">
+      <div class="page-wrap essentials-layout">
+        <div class="essentials-copy">
+          <p class="eyebrow eyebrow-light">THE LITTLE THINGS MATTER</p>
+          <h2>Feel prepared.<br><em>Enjoy the moment.</em></h2>
+          <p>A thoughtful travel checklist for comfort, personal care and peace of mind. Tick items off as you pack; your list stays on this device.</p>
+          <div class="essential-stat"><strong id="checkProgress">0 / 10</strong><span>items ready to pack</span><div class="progress-track"><i id="progressBar"></i></div></div>
+        </div>
+        <div class="checklist-panel">
+          <div class="checklist-head"><div><span class="panel-step">03 / YOUR PACKING LIST</span><h3>Travel essentials</h3></div><button class="text-link" id="resetChecklist">Reset list ↺</button></div>
+          <div class="checklist-grid" id="checklist">
+            <label class="check-item"><input type="checkbox" value="Travel documents"><span class="check-custom"></span><span><b>Travel documents</b><small>Passport, tickets and copies</small></span></label>
+            <label class="check-item"><input type="checkbox" value="Weather-ready outfits"><span class="check-custom"></span><span><b>Weather-ready outfits</b><small>Layers and comfortable shoes</small></span></label>
+            <label class="check-item"><input type="checkbox" value="Personal care kit"><span class="check-custom"></span><span><b>Personal care kit</b><small>Daily toiletries and skincare</small></span></label>
+            <label class="check-item"><input type="checkbox" value="Phone and chargers"><span class="check-custom"></span><span><b>Phone and chargers</b><small>Adapters and power bank</small></span></label>
+            <label class="check-item"><input type="checkbox" value="Sun protection"><span class="check-custom"></span><span><b>Sun protection</b><small>SPF, hat and sunglasses</small></span></label>
+            <label class="check-item"><input type="checkbox" value="First-aid basics"><span class="check-custom"></span><span><b>First-aid basics</b><small>Personal essentials and plasters</small></span></label>
+            <label class="check-item"><input type="checkbox" value="Regular medicines"><span class="check-custom"></span><span><b>Regular medicines</b><small>In original packaging, as prescribed</small></span></label>
+            <label class="check-item"><input type="checkbox" value="Protection and sexual health"><span class="check-custom"></span><span><b>Protection & sexual health</b><small>Condoms and compatible lubricant, if relevant</small></span></label>
+            <label class="check-item"><input type="checkbox" value="Reusable water bottle"><span class="check-custom"></span><span><b>Reusable water bottle</b><small>Stay hydrated on the go</small></span></label>
+            <label class="check-item"><input type="checkbox" value="A small thoughtful gift"><span class="check-custom"></span><span><b>A thoughtful little gift</b><small>A personal touch for the trip</small></span></label>
+          </div>
+          <p class="health-note">Health note: this is a general packing aid, not medical advice. Check medicine rules for your destination and ask a qualified clinician or pharmacist about health concerns.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-wrap" id="stories">
+      <div class="section-heading">
+        <div><p class="eyebrow">WORDS THAT BRING US CLOSER</p><h2>Stories for the <em>in-between moments.</em></h2><p class="section-lede">Short, original fiction and thoughtful prompts about connection, trust and the little rituals of love.</p></div>
+        <span class="editorial-tag">THE VELORA JOURNAL · VOL. 01</span>
+      </div>
+      <div class="story-grid">
+        <article class="story-card story-large">
+          <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=82" alt="Couple sharing a quiet moment outdoors" loading="lazy">
+          <div class="story-overlay"><span>FICTION · 5 MIN READ</span><h3>The Last Light<br>in Santorini</h3><p>Sometimes the best plans leave room for the unexpected.</p><button class="button button-light story-open" data-story="santorini">Read the story ↗</button></div>
+        </article>
+        <article class="story-card">
+          <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=900&q=82" alt="Warm evening light over a peaceful landscape" loading="lazy">
+          <div class="story-overlay"><span>REFLECTION · 3 MIN READ</span><h3>The Art of Being Present</h3><p>A small reminder to put the phone away and notice the moment.</p><button class="story-link story-open" data-story="present">Read reflection ↗</button></div>
+        </article>
+        <article class="story-card">
+          <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=900&q=82" alt="Friends enjoying an outdoor evening together" loading="lazy">
+          <div class="story-overlay"><span>CONNECTION · 4 MIN READ</span><h3>A Table for One, A World of Possibility</h3><p>Being on your own can be the beginning of something good.</p><button class="story-link story-open" data-story="solo">Read reflection ↗</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="concierge-section" id="concierge">
+      <div class="page-wrap concierge-layout">
+        <div class="concierge-copy">
+          <div class="concierge-orb">✧</div>
+          <p class="eyebrow eyebrow-light">YOUR THOUGHTFUL TRAVEL COMPANION</p>
+          <h2>Meet the VELORA<br><em>Concierge.</em></h2>
+          <p>Ask for a destination idea, a packing tip, a date-night plan or a little inspiration. This first version uses curated demo guidance directly in your browser.</p>
+          <span class="demo-label">INTERACTIVE DEMO · NO API OR ACCOUNT REQUIRED</span>
+        </div>
+        <div class="chat-panel">
+          <div class="chat-head"><div class="chat-avatar">V</div><div><strong>VELORA Concierge</strong><small><span class="status-dot"></span> Ready to help · Demo mode</small></div><button id="clearChat" class="clear-chat" aria-label="Clear chat">↺</button></div>
+          <div class="chat-messages" id="chatMessages" aria-live="polite">
+            <div class="chat-message assistant"><span class="chat-label">VELORA</span><p>Welcome. What would make your next experience feel special?</p></div>
+            <div class="suggestion-row"><button class="suggestion" data-question="Suggest a romantic destination">Romantic destination</button><button class="suggestion" data-question="Help me pack for a warm coastal trip">Packing for the coast</button><button class="suggestion" data-question="Give me a thoughtful solo date idea">Solo date idea</button></div>
+          </div>
+          <form class="chat-input-row" id="chatForm"><label class="visually-hidden" for="chatInput">Ask the VELORA Concierge</label><input id="chatInput" type="text" placeholder="Ask for an idea or a little inspiration…" maxlength="240" autocomplete="off"><button type="submit" aria-label="Send message">↑</button></form>
+          <p class="chat-footnote">Demo responses are pre-written suggestions, not medical, legal or live travel advice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter-section page-wrap">
+      <div><p class="eyebrow">A NOTE FROM VELORA</p><h2>Good things are better <em>shared.</em></h2><p>Save your ideas here and return whenever you need a little inspiration.</p></div>
+      <button class="button button-primary" id="showSaved">View my saved ideas <span>→</span></button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-wrap footer-main">
+      <div class="footer-brand"><a class="brand" href="#top"><span class="brand-symbol">♡</span><span class="brand-copy"><strong>VELORA</strong><small>ROMANCE · TRAVEL · LIFESTYLE</small></span></a><p>A thoughtful guide to beautiful experiences, wherever life takes you.</p></div>
+      <div><b>Explore</b><a href="#discover">Destinations</a><a href="#planner">Trip planner</a><a href="#style">Style guide</a></div>
+      <div><b>Inspiration</b><a href="#stories">Romance journal</a><a href="#essentials">Travel essentials</a><a href="#concierge">Concierge demo</a></div>
+      <div><b>Our principles</b><a href="#responsible">Respect & consent</a><a href="#responsible">Privacy first</a><a href="#responsible">Adults 18+</a></div>
+    </div>
+    <div class="footer-bottom page-wrap" id="responsible"><span>© <span id="year"></span> VELORA. Made for meaningful moments.</span><span>Adults 18+ · Respect · Consent · Wellbeing</span></div>
+    <div class="image-credits page-wrap">Photography: <a href="https://unsplash.com/photos/couple-holding-hands-at-sunset-by-the-water-_kaDjYtlJDY" target="_blank" rel="noreferrer">Max Ovcharenko / Unsplash</a>, <a href="https://unsplash.com/" target="_blank" rel="noreferrer">Unsplash contributors</a>. Photo links are used for visual inspiration; destination information is illustrative.</div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="story-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close story">×</button>
+      <p class="eyebrow">THE VELORA JOURNAL</p>
+      <h2 id="modalTitle"></h2>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div class="saved-drawer" id="savedDrawer" aria-hidden="true">
+    <div class="drawer-head"><div><span class="panel-step">YOUR PERSONAL COLLECTION</span><h3>Saved ideas</h3></div><button id="closeSaved" aria-label="Close saved ideas">×</button></div>
+    <div id="savedItems" class="saved-items"><p class="empty-saved">Your saved destinations and plans will appear here.</p></div>
+  </div>
+  <div class="drawer-scrim" id="drawerScrim"></div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
