@@ -13,23 +13,52 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: \${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
         uses: actions/checkout@v6
+
+      - name: Validate JavaScript and local assets
+        run: |
+          node --check app.js
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class LocalAssetChecker(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.paths = []
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  for key in ("src", "href"):
+                      value = attrs.get(key, "")
+                      if value.startswith("./") and not value.startswith("./#"):
+                          self.paths.append(value.split("?")[0])
+
+          parser = LocalAssetChecker()
+          parser.feed(Path("index.html").read_text(encoding="utf-8"))
+          missing = [p for p in parser.paths if p != "./" and not Path(p[2:]).exists()]
+          if missing:
+              raise SystemExit("Missing local assets: " + ", ".join(missing))
+          print(f"Validated {len(parser.paths)} local HTML references.")
+          PY
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
+
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4
         with:
           path: '.'
+
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
