@@ -29,3 +29,13 @@
 @media(max-width:390px){.hero h1{font-size:51px}.hero-visual{width:49%}.hero-copy{max-width:100%}.hero-lede{max-width:285px}.hero-values span:last-child{display:none}.destination-grid{grid-template-columns:1fr}.destination-card>img{height:190px}.destination-meta p{min-height:unset}.feature-grid{grid-auto-rows:155px}.experience-card{min-height:230px}.studio-card{grid-template-columns:1fr}.studio-preview{min-height:205px}.studio-form{padding:17px}.shop-card h3{font-size:15px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 @media print{.header,.age-gate,.toast,.saved-drawer,.drawer-scrim,.modal-backdrop,.profile-backdrop,.search-backdrop,.footer,.btn,.chat-card{display:none!important}body{background:white;color:#111}.page-wrap{width:100%}.planner-section,.wellbeing-section,.concierge-section{background:white;color:#111}.planner-intro>p,.wellbeing-layout p,.concierge-copy p{color:#333}}
+
+.mobile-tabbar{display:none}
+@media(max-width:760px){
+  body{padding-bottom:63px}
+  .mobile-tabbar{position:fixed;z-index:75;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(5,1fr);background:#101827f6;border-top:1px solid #c9a66b7a;padding:7px 7px calc(7px + env(safe-area-inset-bottom));backdrop-filter:blur(15px)}
+  .mobile-tabbar a,.mobile-tabbar button{border:0;background:none;color:#cdd3dc;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:44px}
+  .mobile-tabbar span{font:22px var(--serif);color:#e0c18b;line-height:1.15}
+  .mobile-tabbar small{font:7px var(--sans);letter-spacing:.04em}
+  .mobile-tabbar a:active,.mobile-tabbar button:active{color:#fff}
+}
