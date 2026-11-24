@@ -1,4 +1,4 @@
-const CACHE_NAME='velora-shell-v3';
+const CACHE_NAME='velora-editorial-v4';
 const SHELL=[
   './',
   './index.html',
@@ -7,7 +7,7 @@ const SHELL=[
   './app.js',
   './manifest.webmanifest',
   './icon.svg',
-  './assets/velora-couple-hero.jpg'
+  './assets/velora-man-identity.jpg'
 ];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
