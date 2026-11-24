@@ -2,6 +2,10 @@
 
 VELORA is a premium, adults-only romance, travel and lifestyle experience built as a static website and installable Progressive Web App. The product is designed around meaningful travel, thoughtful couple and solo experiences, personal style, everyday essentials, original stories and wellbeing.
 
+## Latest homepage art direction
+
+The homepage uses one full-width sunlit couple campaign image with the owner's identity represented within the couple, not a standalone profile portrait. The hero, trip finder, four trust points and six image-led experience cards are designed as one continuous editorial landing section, with a separate mobile composition.
+
 ## Design direction
 
 - Midnight navy, champagne gold, warm ivory and restrained rose accents
