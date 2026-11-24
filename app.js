@@ -75,7 +75,7 @@
   };
   const openSaved=()=>{$('#savedDrawer').classList.add('open');$('#savedDrawer').setAttribute('aria-hidden','false');$('#drawerScrim').classList.add('open');renderSaved();};
   const closeSaved=()=>{$('#savedDrawer').classList.remove('open');$('#savedDrawer').setAttribute('aria-hidden','true');$('#drawerScrim').classList.remove('open');};
-  $('#openSaved').addEventListener('click',openSaved);$('#savedClose').addEventListener('click',closeSaved);$('#drawerScrim').addEventListener('click',closeSaved);
+  $('#openSaved').addEventListener('click',openSaved);$('#savedClose').addEventListener('click',closeSaved);$('#drawerScrim').addEventListener('click',closeSaved);$('#mobileSaved')?.addEventListener('click',openSaved);
   $('#printSaved').addEventListener('click',()=>window.print());
   $$('#destinationGrid [data-save]').forEach(button=>button.addEventListener('click',()=>addSaved(button.dataset.save,'Destination')));
   $$('#shopGrid [data-shop-save]').forEach(button=>button.addEventListener('click',()=>addSaved(button.dataset.shopSave,'Essentials')));
