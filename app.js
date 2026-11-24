@@ -156,6 +156,22 @@
     $('#styleOutput').scrollIntoView({behavior:'smooth',block:'nearest'});
   });
 
+  // Browser-local travel, grocery and personal-care checklist.
+  const packingInputs=$('#packingList input[type="checkbox"]');
+  let packedItems=safeGet('velora.packing.v1',[]);
+  const refreshPacking=()=>{
+    packingInputs.forEach(input=>{input.checked=packedItems.includes(input.value);});
+    const done=packingInputs.filter(input=>input.checked).length;
+    $('#packingCount').textContent=done+' / '+packingInputs.length;
+    $('#packingBar').style.width=(packingInputs.length?done/packingInputs.length*100:0)+'%';
+  };
+  packingInputs.forEach(input=>input.addEventListener('change',()=>{
+    packedItems=packingInputs.filter(item=>item.checked).map(item=>item.value);
+    safeSet('velora.packing.v1',packedItems);refreshPacking();
+  }));
+  $('#resetPacking').addEventListener('click',()=>{packedItems=[];safeSet('velora.packing.v1',packedItems);refreshPacking();toast('Your packing list has been reset.');});
+  refreshPacking();
+
   // Shop filters.
   $$('#shopTabs [data-shop]').forEach(button=>button.addEventListener('click',()=>{
     $$('#shopTabs button').forEach(item=>item.classList.remove('selected'));button.classList.add('selected');
